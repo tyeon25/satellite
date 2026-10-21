@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>과학기술정보통신부 위성전파감시센터 (SRMC) - 대한민국의 우주 전파 주권을 지키는 등대</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- 헤더 / 내비게이션 -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="logo-area">
+        <div class="emblem-circle">
+          <svg class="satellite-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M4.93 4.93a10 10 0 0 1 14.14 0"></path>
+            <path d="M7.76 7.76a6 6 0 0 1 8.48 0"></path>
+            <line x1="12" y1="12" x2="12" y2="15"></line>
+            <line x1="9" y1="21" x2="15" y2="21"></line>
+            <line x1="12" y1="18" x2="12" y2="21"></line>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="ministry">과학기술정보통신부 중앙전파관리소</span>
+          <span class="agency">위성전파감시센터 <span class="abbr">SRMC</span></span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#hero">홈</a>
+        <a href="#about">기관소개</a>
+        <a href="#duties">핵심업무</a>
+        <a href="#interactive-simulator">궤도 감시 체험</a>
+        <a href="#citizen-helper">맞춤 혜택 찾기</a>
+        <a href="#trends">최신 동향</a>
+        <a href="#news">관련 뉴스</a>
+        <a href="#faq">자주 묻는 질문</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 메인 히어로 섹션 -->
+  <section class="hero" id="hero">
+    <canvas id="spaceCanvas"></canvas>
+    <div class="hero-content">
+      <div class="badge pulse-badge">
+        <span class="live-indicator"></span> 24시간 365일 실시간 우주 전파 감시 중
+      </div>
+      <h1 class="hero-title">
+        우주 전파 주권을 지키는<br>
+        <span class="text-gradient">대한민국의 우주 등대</span>
+      </h1>
+      <p class="hero-desc">
+        한반도 상공 36,000km 정지궤도부터 저궤도 군집위성까지,<br>
+        혼신과 간섭 없는 깨끗한 우주 전파 환경을 지키는 <strong>위성전파감시센터</strong>입니다.
+      </p>
+      <div class="hero-buttons">
+        <a href="#about" class="btn btn-primary">센터 알아보기</a>
+        <a href="#citizen-helper" class="btn btn-accent">💡 내게 필요한 도움 찾기</a>
+        <a href="#interactive-simulator" class="btn btn-secondary">위성 감시 체험</a>
+      </div>
+      
+      <!-- 핵심 요약 지표 카드 -->
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-number">2002년</div>
+          <div class="stat-label">세계 5번째 설립</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">55°E ~ 160°W</div>
+          <div class="stat-label">광범위 우주 감시 범위</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">연간 800+기</div>
+          <div class="stat-label">상시 감시 인공위성</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">24 / 7</div>
+          <div class="stat-label">무중단 위성 혼신 대응</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 센터 소개 섹션 -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">ABOUT US</span>
+        <h2 class="section-title">위성전파감시센터는 어떤 곳인가요?</h2>
+        <p class="section-subtitle">
+          인공위성이 쏘아 올린 전파는 우리 일상(GPS, 날씨 예보, 항공·해상 통신, 방송)에 필수적입니다.<br>
+          만약 전파가 서로 엉키거나 방해를 받으면 국가적 마비가 올 수 있기에 이를 지키는 국가 핵심 기관입니다.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card highlight-card">
+          <div class="icon-box">🛡️</div>
+          <h3>국가 우주 전파 주권 수호</h3>
+          <p>
+            대한민국 상공을 통과하는 국내외 모든 위성의 전파를 실시간으로 수신·분석하여,
+            국제전기통신연합(ITU) 규정을 준수하는지 확인하고 전파 영토를 침해당하지 않도록 감시합니다.
+          </p>
+        </div>
+        <div class="about-card">
+          <div class="icon-box">📡</div>
+          <h3>세계 5번째 첨단 감시 인프라</h3>
+          <p>
+            경기도 이천시에 위치한 센터는 미국, 영국, 독일, 일본에 이어 세계 5번째로 구축된 
+            최첨단 대형 파라볼라 안테나 기지국과 신호 분석 센터를 완비하고 있습니다.
+          </p>
+        </div>
+        <div class="about-card">
+          <div class="icon-box">🚀</div>
+          <h3>우주 통신 혼신·재난 방지</h3>
+          <p>
+            무궁화위성, 천리안위성, 누리호 발사체 등 국가 핵심 우주 자산이 
+            불법 전파나 외부 혼신 간섭으로 인해 통신 장애를 겪지 않도록 사전 예방하고 즉각 추적합니다.
+          </p>
+        </div>
+      </div>
+
+      <!-- 쉬운 비유 인포그래픽 -->
+      <div class="metaphor-box">
+        <div class="metaphor-title">💡 국민 눈높이 한 줄 비유!</div>
+        <div class="metaphor-content">
+          <div class="metaphor-item">
+            <span class="m-emoji">🚦</span>
+            <strong>우주 고속도로의 ‘교통경찰’</strong>
+            <p>도로에 과속차량이나 신호위반 차량이 없도록 살피듯, 우주 궤도에서 정해진 주파수와 출력을 지키는지 감시합니다.</p>
+          </div>
+          <div class="metaphor-divider"></div>
+          <div class="metaphor-item">
+            <span class="m-emoji">📻</span>
+            <strong>보이지 않는 하늘길의 ‘전파 소방관’</strong>
+            <p>위성 방송이 끊기거나 GPS 오류를 유발하는 방해 전파(혼신)가 발생하면 즉각 발신지를 찾아 불을 끄듯 해결합니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 주요 핵심 업무 섹션 -->
+  <section class="section duties-section bg-darker" id="duties">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">CORE MISSIONS</span>
+        <h2 class="section-title">위성전파감시센터의 4대 핵심 업무</h2>
+        <p class="section-subtitle">안정적인 대한민국 위성 통신 환경을 보장하기 위해 센터 연구원들이 수행하는 전문 임무입니다.</p>
+      </div>
+
+      <div class="duties-tabs">
+        <button class="tab-btn active" data-tab="duty-1">01. 전파 발사상태 감시</button>
+        <button class="tab-btn" data-tab="duty-2">02. 궤도·제원 정밀측정</button>
+        <button class="tab-btn" data-tab="duty-3">03. 유해 혼신원 추적·제거</button>
+        <button class="tab-btn" data-tab="duty-4">04. 우주전파 국제협력</button>
+      </div>
+
+      <div class="tab-contents">
+        <!-- 업무 1 -->
+        <div class="tab-pane active" id="duty-1">
+          <div class="duty-detail-grid">
+            <div class="duty-info">
+              <span class="duty-badge">MISSION 01</span>
+              <h3>국내외 인공위성 전파 발사상태 실시간 감시</h3>
+              <p class="lead-text">
+                동경 55도에서 서경 160도까지, 아시아·태평양 전역 상공을 지나는 위성들이 쏘는 전파를 수신하여 정상 동작 여부를 확인합니다.
+              </p>
+              <ul class="check-list">
+                <li><strong>정지궤도(GEO) 위성 감시:</strong> 고도 약 35,786km 상공에 고정된 통신·기상 위성 24시간 감시</li>
+                <li><strong>비정지·저궤도(LEO) 위성 감시:</strong> 지구를 초고속으로 공전하는 스타링크, 관측위성 궤적 실시간 추적</li>
+                <li><strong>불법·무단 전파 감지:</strong> ITU에 미등록되었거나 허가받지 않은 불법 전파 송출 탐지</li>
+              </ul>
+            </div>
+            <div class="duty-visual">
+              <div class="visual-box radar-card">
+                <div class="radar-sweep"></div>
+                <div class="radar-satellite sat-1"><span>무궁화 6A</span></div>
+                <div class="radar-satellite sat-2"><span>천리안 2B</span></div>
+                <div class="radar-satellite sat-3"><span>스타링크</span></div>
+                <div class="radar-center">이천 감시센터</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 업무 2 -->
+        <div class="tab-pane" id="duty-2">
+          <div class="duty-detail-grid">
+            <div class="duty-info">
+              <span class="duty-badge">MISSION 02</span>
+              <h3>위성 궤도 위치 및 전파 기술제원 정밀 측정</h3>
+              <p class="lead-text">
+                위성이 허가된 궤도 좌표에 정확히 머물고 있는지, 주파수 대역폭과 전력 세기가 기준치 이내인지 검증합니다.
+              </p>
+              <ul class="check-list">
+                <li><strong>위성 궤도 위치 측정:</strong> 정밀 안테나를 통해 경도와 위도 방향 궤도 이탈 여부 감시</li>
+                <li><strong>중심 주파수 및 대역폭 검증:</strong> 주변 타 위성 채널을 침범하지 않는지 스펙트럼 분석</li>
+                <li><strong>전력속밀도(PFD) 측정:</strong> 지상 지표면에 도달하는 전파 세기가 인체 및 지상망에 피해를 주지 않는지 측정</li>
+              </ul>
+            </div>
+            <div class="duty-visual">
+              <div class="visual-box spectrum-box">
+                <div class="spectrum-bars">
+                  <div class="bar" style="height: 45%;"></div>
+                  <div class="bar" style="height: 65%;"></div>
+                  <div class="bar highlight" style="height: 92%;"><span class="spectrum-tag">정상 대역</span></div>
+                  <div class="bar" style="height: 70%;"></div>
+                  <div class="bar" style="height: 30%;"></div>
+                </div>
+                <div class="spectrum-label">실시간 주파수 스펙트럼 분석 시뮬레이션</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 업무 3 -->
+        <div class="tab-pane" id="duty-3">
+          <div class="duty-detail-grid">
+            <div class="duty-info">
+              <span class="duty-badge">MISSION 03</span>
+              <h3>위성망 혼신 조사 및 발신원 탐색 (전파 간섭 차단)</h3>
+              <p class="lead-text">
+                국내 통신위성(무궁화위성 등)이나 기상 관측에 장애가 발생하면 혼신 발신지의 위치를 신속히 삼각측량하여 제거합니다.
+              </p>
+              <ul class="check-list">
+                <li><strong>도착 시간차(TDOA) / 주파수차(FDOA) 분석:</strong> 2기 이상의 위성 신호 차이를 정밀 계산하여 지구상 송출원 좌표 특정</li>
+                <li><strong>이동형 감시차량 출동:</strong> 지상에서 의도적·실수형 전파 교란 장치를 현장 추적</li>
+                <li><strong>우주 발사체(누리호 등) 발사 지원:</strong> 나로우주센터 인근 전파 청정 환경 조성</li>
+              </ul>
+            </div>
+            <div class="duty-visual">
+              <div class="visual-box interference-box">
+                <div class="pulse-ring"></div>
+                <div class="geo-target">📍 혼신원 특정 완료 (추적 성공)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 업무 4 -->
+        <div class="tab-pane" id="duty-4">
+          <div class="duty-detail-grid">
+            <div class="duty-info">
+              <span class="duty-badge">MISSION 04</span>
+              <h3>우주 전파 국제협력 및 국가 산업 육성 지원</h3>
+              <p class="lead-text">
+                전파는 국경이 없기 때문에 ITU(국제전기통신연합) 및 주변국 전파 관리 당국과의 긴밀한 협력 네트워크를 운영합니다.
+              </p>
+              <ul class="check-list">
+                <li><strong>ITU 전파 규칙(RR) 집행:</strong> 국제 전파 분쟁 발생 시 객관적 측정 데이터 제공으로 국익 보호</li>
+                <li><strong>위성전파 기술 컨퍼런스 개최:</strong> 산·학·연 전문가들과 최신 6G, 저궤도 위성 기술 공유</li>
+                <li><strong>분기별 감시동향 리포트 발행:</strong> 학계와 산업계에 우주 전파 환경 데이터 무상 개방</li>
+              </ul>
+            </div>
+            <div class="duty-visual">
+              <div class="visual-box global-box">
+                <div class="globe-network">
+                  <div class="network-node node-kr">대한민국(SRMC)</div>
+                  <div class="network-node node-itu">ITU(스위스 제네바)</div>
+                  <div class="network-node node-intl">글로벌 위성망</div>
+                  <div class="network-line"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 대화형 위성 감시 시뮬레이터 (브라우저 JS 단독 동작) -->
+  <section class="section simulator-section" id="interactive-simulator">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">INTERACTIVE EXPERIENCE</span>
+        <h2 class="section-title">가상 위성전파 감시 콘솔 체험</h2>
+        <p class="section-subtitle">
+          감시센터 관제실 화면을 직접 조작해 보세요. 원하는 위성을 클릭하면 안테나가 지향되고 전파 제원을 실시간 측정합니다.
+        </p>
+      </div>
+
+      <div class="simulator-wrapper">
+        <div class="sim-screen">
+          <div class="sim-header">
+            <span class="sim-status"><span class="dot green"></span> SRMC-MONITOR v4.2 ONLINE</span>
+            <span class="sim-time" id="simClock">2026-10-21 14:17:15 KST</span>
+          </div>
+          
+          <div class="sim-body">
+            <!-- 궤도 시각화 영역 -->
+            <div class="orbit-visualizer">
+              <div class="earth-center">
+                <div class="earth-globe">🌏</div>
+                <span>이천 감시소</span>
+              </div>
+              
+              <!-- 궤도들 -->
+              <div class="orbit-ring geo-ring">
+                <span class="ring-label">정지궤도 (GEO ~36,000km)</span>
+              </div>
+              <div class="orbit-ring meo-ring"></div>
+              <div class="orbit-ring leo-ring">
+                <span class="ring-label">저궤도 (LEO ~550km)</span>
+              </div>
+
+              <!-- 클릭 가능한 위성 노드들 -->
+              <div class="sim-sat geo-sat active" data-id="sat1" style="top: 15%; left: 82%;">
+                <div class="sat-icon">🛰️</div>
+                <div class="sat-name">무궁화 6A (통신)</div>
+              </div>
+
+              <div class="sim-sat geo-sat" data-id="sat2" style="top: 80%; left: 25%;">
+                <div class="sat-icon">🛰️</div>
+                <div class="sat-name">천리안 2B (해양·기상)</div>
+              </div>
+
+              <div class="sim-sat leo-sat" data-id="sat3" style="top: 45%; left: 62%;">
+                <div class="sat-icon">📡</div>
+                <div class="sat-name">스타링크 군집 위성</div>
+              </div>
+
+              <div class="sim-sat leo-sat alert-sat" data-id="sat4" style="top: 60%; left: 38%;">
+                <div class="sat-icon">⚠️</div>
+                <div class="sat-name">미식별 전파원 (주의)</div>
+              </div>
+            </div>
+
+            <!-- 관제 패널 정보창 -->
+            <div class="sim-panel">
+              <div class="panel-box">
+                <div class="panel-title">수신 안테나 지향 상태</div>
+                <div class="antenna-direction">
+                  <div class="az-el">
+                    <span>방위각(Az): <strong id="valAz">116.4°</strong></span>
+                    <span>고도각(El): <strong id="valEl">48.2°</strong></span>
+                  </div>
+                  <div class="signal-gauge">
+                    <label>수신 신호 강도 (C/N):</label>
+                    <div class="gauge-bar"><div class="gauge-fill" id="valGauge" style="width: 88%;"></div></div>
+                    <span id="valDbm" class="gauge-value">-68.4 dBm (우수)</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel-box">
+                <div class="panel-title">선택된 위성 상세 제원 (ITU 규정 대조)</div>
+                <table class="sim-table">
+                  <tr>
+                    <th>위성 명칭</th>
+                    <td id="infoName">무궁화 6A호 (Koreasat-6A)</td>
+                  </tr>
+                  <tr>
+                    <th>궤도 형태</th>
+                    <td id="infoOrbit">정지궤도 (GEO, 동경 116.0°)</td>
+                  </tr>
+                  <tr>
+                    <th>중심 주파수</th>
+                    <td id="infoFreq">12.540 GHz (Ku-Band)</td>
+                  </tr>
+                  <tr>
+                    <th>대역폭 / 편파</th>
+                    <td id="infoBand">36 MHz / 수평편파 (Horizontal)</td>
+                  </tr>
+                  <tr>
+                    <th>전파 상태 판정</th>
+                    <td id="infoStatus"><span class="badge-status badge-ok">✅ 정상 송출 (ITU 적합)</span></td>
+                  </tr>
+                </table>
+              </div>
+
+              <button class="btn btn-primary btn-block" id="btnRunTest">혼신 탐색 & 스캔 재실행</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 국민 맞춤형 진단 설문 / 체크리스트 섹션 -->
+  <section class="section citizen-section" id="citizen-helper">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">CITIZEN SERVICE FINDER</span>
+        <h2 class="section-title">나는 이 기관으로부터 어떤 도움을 받을 수 있을까?</h2>
+        <p class="section-subtitle">
+          일반 국민, 학생·학부모, 통신·위성 기업, 연구자까지!<br>
+          당신의 상황과 관심사에 해당하는 항목을 체크하시면 위성전파감시센터가 제공하는 맞춤 서비스와 혜택을 즉시 찾아드립니다.
+        </p>
+      </div>
+
+      <div class="survey-card">
+        <!-- 1단계: 사용자 유형 선택 -->
+        <div class="survey-step">
+          <div class="step-badge">STEP 1. 당신은 어떤 유형에 해당하시나요? (단일 선택)</div>
+          <div class="persona-options" id="personaOptions">
+            <label class="persona-card active" data-persona="citizen">
+              <input type="radio" name="persona" value="citizen" checked>
+              <div class="persona-icon">👤</div>
+              <div class="persona-info">
+                <strong>일반 국민 / 생활 이용자</strong>
+                <p>스마트폰 내비, 위성방송, 기상·재난 정보 등 일상 전파 이용</p>
+              </div>
+            </label>
+
+            <label class="persona-card" data-persona="student">
+              <input type="radio" name="persona" value="student">
+              <div class="persona-icon">🎓</div>
+              <div class="persona-info">
+                <strong>학생 / 학부모 / 교육자</strong>
+                <p>우주과학 견학, 진로 탐색, 청소년 전파 캠프 등 체험 관심</p>
+              </div>
+            </label>
+
+            <label class="persona-card" data-persona="business">
+              <input type="radio" name="persona" value="business">
+              <div class="persona-icon">🛰️</div>
+              <div class="persona-info">
+                <strong>위성·통신·드론 기업 관계자</strong>
+                <p>주파수 혼신 조사, 위성망 등록 지원, 전파 측정 데이터</p>
+              </div>
+            </label>
+
+            <label class="persona-card" data-persona="researcher">
+              <input type="radio" name="persona" value="researcher">
+              <div class="persona-icon">🔬</div>
+              <div class="persona-info">
+                <strong>학계 / 연구원 / 우주 개발자</strong>
+                <p>우주 전파 환경 연구, 6G NTN 표준화, 감시 동향 통계</p>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- 2단계: 체크리스트 (다중 선택) -->
+        <div class="survey-step">
+          <div class="step-badge">STEP 2. 현재 겪고 계신 상황이나 필요한 정보를 모두 체크해 주세요. (다중 선택 가능)</div>
+          <div class="checklist-grid" id="checklistContainer">
+            <!-- 자바스크립트로 렌더링되거나 정적으로 배치 -->
+          </div>
+        </div>
+
+        <!-- 액션 버튼 -->
+        <div class="survey-action text-center">
+          <button type="button" class="btn btn-primary btn-large" id="btnDiagnose">
+            🔍 맞춤 혜택 & 지원 가이드 확인하기
+          </button>
+          <button type="button" class="btn btn-secondary" id="btnResetSurvey">
+            초기화
+          </button>
+        </div>
+
+        <!-- 결과 영역 -->
+        <div class="survey-result-box" id="surveyResultBox" style="display: none;">
+          <div class="result-header">
+            <div class="result-badge">위성전파감시센터 맞춤 솔루션</div>
+            <h3 class="result-title" id="resultTitle">국민 여러분을 위한 지원 가이드</h3>
+            <p class="result-desc" id="resultDesc">선택하신 조건에 맞춰 센터가 제공하는 구체적인 혜택과 이용 절차입니다.</p>
+          </div>
+
+          <div class="result-cards-grid" id="resultCardsContainer">
+            <!-- 자바스크립트로 생성 -->
+          </div>
+
+          <div class="result-callout">
+            <div class="callout-icon">📞</div>
+            <div class="callout-text">
+              <strong>직접 상담 및 접수가 필요하신가요?</strong>
+              <p>위성전파 혼신 신고 및 견학 안내는 위성전파감시센터 대표전화(031-644-5800) 또는 중앙전파관리소 민원실을 통해 신속하게 도움받으실 수 있습니다.</p>
+            </div>
+            <a href="https://www.srmc.go.kr" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              공식 민원센터 바로가기
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 최신 주요 동향 섹션 (뉴 스페이스 & 저궤도 혁신) -->
+  <section class="section trends-section" id="trends">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">FUTURE & TRENDS</span>
+        <h2 class="section-title">위성전파감시센터의 미래 전략과 최신 동향</h2>
+        <p class="section-subtitle">
+          스페이스X의 스타링크, 아마존 카이퍼, 6G 비지상망(NTN) 등 우주 대항해 시대를 맞아 센터는 거대한 도약을 준비하고 있습니다.
+        </p>
+      </div>
+
+      <div class="trends-container">
+        <!-- 동향 1 -->
+        <div class="trend-item">
+          <div class="trend-number">01</div>
+          <div class="trend-body">
+            <h3>저궤도(LEO) 군집위성 전용 감시 시스템 구축</h3>
+            <p>
+              수만 기의 저궤도 소형 위성이 고속으로 한반도 상공을 교차 통과함에 따라, 
+              기존 정지궤도 위성과 동일한 주파수(Ku·Ka 대역)를 둘러싼 전파 혼신 위험이 급증하고 있습니다. 
+              센터는 고속 추적 특수 안테나와 다중 위성 동시 수신 장비를 선제적으로 증설하고 있습니다.
+            </p>
+            <div class="trend-tag-group">
+              <span class="t-tag">#스타링크대응</span>
+              <span class="t-tag">#위성인터넷</span>
+              <span class="t-tag">#군집위성실시간추적</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 동향 2 -->
+        <div class="trend-item">
+          <div class="trend-number">02</div>
+          <div class="trend-body">
+            <h3>6G 입체 통신(NTN, 비지상망) 시대의 전파 주권</h3>
+            <p>
+              지상 기지국뿐만 아니라 공중과 우주 위성이 하나로 결합되는 6G 시대에 대비하여, 
+              센터는 지상-우주 간 간섭을 제로화하는 전파 간섭 모델링과 밀리미터파 빔포밍 측정 기술 표준화를 주도하고 있습니다.
+            </p>
+            <div class="trend-tag-group">
+              <span class="t-tag">#6G통신</span>
+              <span class="t-tag">#비지상네트워크</span>
+              <span class="t-tag">#우주주파수분배</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 동향 3 -->
+        <div class="trend-item">
+          <div class="trend-number">03</div>
+          <div class="trend-body">
+            <h3>우주 재난 및 독자 위성망(소버린 통신) 보호 체계</h3>
+            <p>
+              해외 민간 위성에만 통신망을 의존할 경우 발생하는 안보적 취약성을 극복하고, 
+              한국형 위성항법시스템(KPS) 및 초소형 군집위성의 전파 안정성을 든든하게 뒷받침하고 있습니다.
+            </p>
+            <div class="trend-tag-group">
+              <span class="t-tag">#소버린위성망</span>
+              <span class="t-tag">#KPS한국형GPS</span>
+              <span class="t-tag">#국가안보전파</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 최신 뉴스 기사 링크 섹션 -->
+  <section class="section news-section bg-darker" id="news">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">LATEST MEDIA</span>
+        <h2 class="section-title">언론 보도로 보는 위성전파감시센터</h2>
+        <p class="section-subtitle">주요 언론사(전자신문, 뉴시스 등)에 보도된 생생한 현장 기사 원문을 확인하세요.</p>
+      </div>
+
+      <div class="news-grid">
+        <!-- 기사 1 -->
+        <div class="news-card">
+          <div class="news-meta">
+            <span class="news-press">전자신문</span>
+            <span class="news-date">최신 보도</span>
+          </div>
+          <h4 class="news-title">스타링크 상륙 코앞인데 감시체계 구축은 내년…집중감시·TF로 공백 막는다</h4>
+          <p class="news-excerpt">
+            스페이스X 스타링크의 국내 도입에 발맞춰 위성전파감시센터가 전담 TF를 가동하고 이동감시시스템을 보강하여 우주 전파 혼신 공백 차단에 총력 대응하고 있음을 집중 조명.
+          </p>
+          <div class="news-footer">
+            <a href="https://www.etnews.com/" target="_blank" rel="noopener noreferrer" class="news-link">
+              기사 보러가기 <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 기사 2 -->
+        <div class="news-card">
+          <div class="news-meta">
+            <span class="news-press">전자신문</span>
+            <span class="news-date">기획 보도</span>
+          </div>
+          <h4 class="news-title">과기정통부, '위성전파·기술 컨퍼런스' 개최…저궤도 위성 시대 대응</h4>
+          <p class="news-excerpt">
+            국내외 위성전파 전문가들이 한자리에 모여 6G 비지상망(NTN) 표준화와 저궤도 군집위성 전파 감시 고도화 방안을 논의하고 산학연 협력 생태계를 조성한 현장 소식.
+          </p>
+          <div class="news-footer">
+            <a href="https://www.etnews.com/" target="_blank" rel="noopener noreferrer" class="news-link">
+              기사 보러가기 <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 기사 3 -->
+        <div class="news-card">
+          <div class="news-meta">
+            <span class="news-press">전자신문</span>
+            <span class="news-date">정책 분석</span>
+          </div>
+          <h4 class="news-title">한반도 상공 지나는 스타링크 감시할 전용시스템 만든다</h4>
+          <p class="news-excerpt">
+            정지궤도 중심이던 기존 위성 감시 패러다임을 혁신하여, 초고속 저궤도 위성을 실시간 추적·측정할 수 있는 전용 감시 인프라 구축 추진 현황을 분석.
+          </p>
+          <div class="news-footer">
+            <a href="https://www.etnews.com/" target="_blank" rel="noopener noreferrer" class="news-link">
+              기사 보러가기 <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 기사 4 -->
+        <div class="news-card">
+          <div class="news-meta">
+            <span class="news-press">뉴시스</span>
+            <span class="news-date">기관 르포</span>
+          </div>
+          <h4 class="news-title">위성전파감시센터…年 800여기 위성 감시하며 '우주 주권' 지킨다</h4>
+          <p class="news-excerpt">
+            세계 5번째로 설립된 이천 위성전파감시센터의 웅장한 대형 안테나와 관제 센터를 취재하며, 24시간 대한민국 영공의 우주 전파를 철통 방어하는 현장을 소개.
+          </p>
+          <div class="news-footer">
+            <a href="https://www.newsis.com/" target="_blank" rel="noopener noreferrer" class="news-link">
+              기사 보러가기 <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 기사 5 -->
+        <div class="news-card">
+          <div class="news-meta">
+            <span class="news-press">뉴시스</span>
+            <span class="news-date">산업 현안</span>
+          </div>
+          <h4 class="news-title">"한국형 스타링크 키운다"…위성전파·통신 컨퍼런스 개최</h4>
+          <p class="news-excerpt">
+            우주 통신의 중요성과 함께 독자적인 국가 통신 인프라(소버린 네트워크) 구축 필요성 및 위성 주파수 보호의 당위성을 다룬 콘퍼런스 결과 보도.
+          </p>
+          <div class="news-footer">
+            <a href="https://www.newsis.com/" target="_blank" rel="noopener noreferrer" class="news-link">
+              기사 보러가기 <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 기사 6 -->
+        <div class="news-card highlight-news">
+          <div class="news-meta">
+            <span class="news-press">공식 포털</span>
+            <span class="news-date">공식 안내</span>
+          </div>
+          <h4 class="news-title">위성전파감시센터(SRMC) 공식 웹사이트 및 정기 감시보고서</h4>
+          <p class="news-excerpt">
+            분기별 위성전파 감시동향 리포트, 전파 측정 장비 현황, 대국민 견학 및 시설 안내 등 센터의 공식 행정 서비스를 열람할 수 있습니다.
+          </p>
+          <div class="news-footer">
+            <a href="https://www.srmc.go.kr" target="_blank" rel="noopener noreferrer" class="news-link">
+              공식 홈페이지 바로가기 <span>↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 국민을 위한 알기 쉬운 FAQ 아코디언 -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Q&A</span>
+        <h2 class="section-title">자주 묻는 질문으로 쉽게 이해하기</h2>
+        <p class="section-subtitle">국민 여러분이 가장 궁금해하시는 위성전파에 대한 질문을 정리했습니다.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Q1. 일상생활에서 위성전파가 왜 중요한가요?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              스마트폰의 실시간 내비게이션(GPS), 태풍·장마를 미리 알려주는 기상 예보, 비행기와 선박의 안전 운항, 그리고 해외 스포츠 생중계 등 우리가 매일 누리는 디지털 혜택의 상당 부분이 인공위성 전파로 이루어집니다. 위성 전파에 장애가 생기면 일상생활에 큰 불편과 안전 위협이 발생합니다.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Q2. '위성전파 혼신'이란 무엇이고, 왜 막아야 하나요?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              혼신(간섭)이란 같은 주파수나 인접한 주파수를 둘 이상의 위성이나 지상 기지국이 동시에 사용하여 신호가 찌그러지거나 통신이 마비되는 현상입니다. 도로에서 두 차가 같은 차선을 동시에 차지하려다 충돌하는 것과 같습니다. 센터는 이러한 전파 충돌을 미리 막아 통신을 깨끗하게 유지시킵니다.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Q3. 스타링크 같은 저궤도 위성이 늘어나면 왜 감시가 더 어려워지나요?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              지구와 같은 속도로 도는 정지궤도 위성은 지구에서 볼 때 항상 같은 자리에 멈춰 있어 감시가 비교적 쉽습니다. 반면 저궤도 위성은 90분마다 지구를 한 바퀴 돌 정도로 매우 빠르며, 수천~수만 기가 무리 지어 다니기 때문에 순식간에 지나가는 신호를 놓치지 않고 고속 추적할 수 있는 특수 안테나와 AI 기반 분석 기술이 필수적입니다.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Q4. 일반인도 이천에 있는 위성전파감시센터를 방문하거나 견학할 수 있나요?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              네! 위성전파감시센터는 미래 과학 인재 양성과 국민과의 소통을 위해 청소년 전파 캠프 및 견학 프로그램을 주기적으로 운영하고 있습니다. 거대한 첨단 파라볼라 안테나 숲과 실제 관제실을 둘러보실 수 있으며, 공식 홈페이지(www.srmc.go.kr)를 통해 신청 안내를 확인하실 수 있습니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 푸터 -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <div class="footer-logo">
+          <strong>과학기술정보통신부 중앙전파관리소 위성전파감시센터</strong>
+        </div>
+        <p class="footer-address">
+          주소: 경기도 이천시 설성면 설장로 43-41 위성전파감시센터 | 대표전화: 031-644-5800<br>
+          본 웹 애플리케이션은 별도의 웹 서버나 빌드 없이 더블클릭만으로 실행되는 국민 소통형 웹 앱입니다.
+        </p>
+      </div>
+      <div class="footer-right">
+        <a href="https://www.srmc.go.kr" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white">공식 홈페이지 방문</a>
+      </div>
+    </div>
+    <div class="footer-bottom text-center">
+      <p>&copy; 2026 Satellite Radio Monitoring Center. Republic of Korea. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
